@@ -1,0 +1,11 @@
+# Fichier de configuration secret (TRÈS IMPORTANT)
+.env
+
+# Environnement virtuel (inutile sur GitHub)
+venv/
+env/
+__pycache__/
+
+# Fichiers système
+.DS_Store
+*.log
