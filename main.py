@@ -4,23 +4,6 @@ import io
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
-import http.server
-import socketserver
-import threading
-import os
-
-# Petit serveur pour garder Render content
-def keep_alive():
-    port = int(os.environ.get("PORT", 10000))
-    handler = http.server.SimpleHTTPRequestHandler
-    with socketserver.TCPServer(("", port), handler) as httpd:
-        httpd.serve_forever()
-
-# On lance le serveur dans un fil séparé (thread)
-threading.Thread(target=keep_alive, daemon=True).start()
-
-# --- ICI TON CODE DE BOT HABITUEL ---
-# ex: client.run(os.getenv("TOKEN"))
 
 load_dotenv()
 
