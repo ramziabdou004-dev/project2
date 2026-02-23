@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: Assistant de Ramzi
+    runtime: python # ou 'node' si tu es sur JavaScript
+    buildCommand: pip install -r requirements.txt # ou 'npm install'
+    startCommand: python main.py # ou 'node index.js'
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false # Tu devras saisir la valeur sur le site de Render
